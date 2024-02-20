@@ -1,8 +1,14 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import { render, screen } from "@testing-library/react";
+import "@testing-library/jest-dom";
+import App from "./App";
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+describe("App Component TEST Cases:", () => {
+  test("renders Home component with Library as a default route", () => {
+    //Render the component
+    render(<App />);
+
+    // Assertions
+    const libraryContent = screen.getByText(/library/i);
+    expect(libraryContent).toBeInTheDocument();
+  });
 });
