@@ -3,13 +3,17 @@ import Feed from "../src/screens/feed";
 import Trending from "../src/screens/trending";
 import Player from "../src/screens/player";
 import Favourites from "../src/screens/favourites";
-
+import MainLayout from "../src/screens/home/mainLayout";
 import { Outlet } from "react-router-dom";
 
 const routesConfig = [
   {
     path: "/",
-    element: <Outlet />,
+    element: (
+      <MainLayout>
+        <Outlet />
+      </MainLayout>
+    ),
     errorElement: <h1> NOT FOUND!</h1>,
     children: [
       { path: "/", element: <Library /> },
