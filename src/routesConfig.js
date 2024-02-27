@@ -1,8 +1,8 @@
-import Library from "./screens/library";
-import Feed from "./screens/feed";
-import Trending from "./screens/trending";
-import Player from "./screens/player";
-import Favourites from "./screens/favourites";
+import Library from "../src/screens/library";
+import Feed from "../src/screens/feed";
+import Trending from "../src/screens/trending";
+import Player from "../src/screens/player";
+import Favourites from "../src/screens/favourites";
 
 import { Outlet } from "react-router-dom";
 
